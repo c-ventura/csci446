@@ -1,0 +1,46 @@
+http://cssglobe.com/post/9579/styling-full-width-tabs-with-css3
+for the CSS styling of the link menu
+
+http://phrogz.net/CSS/vertical-align/index.html
+for aligning text to be in the vertical center
+
+http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/
+read through the tutorial, and initially worked from their base code
+
+http://coding.smashingmagazine.com/wp-content/uploads/images/smashing-html5/files/index.html#
+the finished tutorial, I used firebug to double check how things were done.
+
+http://www.w3schools.com/html5/att_select_size.asp
+for syntax of how to use boxes and stuff
+
+used an addon called "Rainbow 1.5" for Firefox to pull the color scheme for the assignment
+total background: #aaaaaa;
+top bar color: #898989;
+block 1 background: #CCCCCC;
+black text: #000000;
+block1 gray text: #666666;
+block2 background: #000000;
+block2 white text: #FFFFFF;
+
+Block3 background(almostwhite):#FCFCFC;
+Current Progress background: #F0F0FF;
+Block3 text: #000000;
+
+using paint to find pixel sizes:
+left margin: 38px
+total width: 1040px
+inside width: 960px
+right margin: 40px
+border: 1px
+block1: 66px height
+block2 height: 35px(37px with border)
+block3 margin(toblock2): 10px
+block3 1st width: 610px
+block3 1st text width: 210px
+block3 1st input width: 400px
+block3 2nd width: 350px
+block3 2nd bluebox width:340px (height: 78px)
+
+footer height: 33px
+
+footer: #F0F0F0; 
