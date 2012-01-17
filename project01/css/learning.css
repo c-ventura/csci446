@@ -20,11 +20,13 @@ h4 {font-size: 1.286em} /* 18px */
 h5 {font-size: 1.143em} /* 16px */
 h6 {font-size: 1em} /* 14px */
 
-h2, h3, h4, h5, h6 {
-    font-weight: 400;
+h1, h2, h3, h4, h5, h6 {
+    /*font-weight: 400;*/
     /*line-height: 1.1;*/
-    margin-bottom: 0;
+    margin: 0 auto;
 }
+
+h5{ font-weight: 400;}
 	
 /* Anchors? Not sure what they're for */
 /*
@@ -42,13 +44,13 @@ a:hover, a:active{
 }
 */
 /* Paragraphs */
-/*
-p {margin-bottom: 1.143em;}
-* p:last-child {margin-bottom: 0;}
+
+p {margin: 5px;}
+
  
 strong, b {font-weight: bold;}
 em, i {font-style: italic;}
-	 
+/*	 
 ::-moz-selection {background: #F6CF74; color: #fff;}
 ::selection {background: #F6CF74; color: #fff;}
  */
@@ -114,7 +116,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	float:left;
 }
 
-	#BigTitle h1{font-size: 22; margin:0; font-weight: bold;}
+	#BigTitle h1{font-size: 22; margin:0 auto;}
 	#BigTitle h5{font-size: 12; color:#666666; margin: 0;}
 	/*
 	#BigTitle h1 a:link, #BigTitle h1 a:visited {
@@ -139,7 +141,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	padding: 0;
 	background: #000000;
 	color:#FFFFFF;
-	font-family: courier,serif;
+	font-family: calibri,sans-serif;
 	width: 960px;
 	float: left;
 
@@ -153,7 +155,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 }
 
 .MenuLinks nav ul {margin: 0 0 0 0; width: 960px; padding: 0;}
-.MenuLinks nav li {float: center; display: inline; margin-left: 20px;}
+.MenuLinks nav li {float: center; display: inline; margin-left: 20px; letter-spacing: -1px; font-weight: bold;}
 .MenuLinks nav li:first-child{margin-left: 0;}
 .MenuLinks nav a:link,a:visited{
 	color: #F0F0F0;
@@ -170,10 +172,12 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	float: left;
 	background: #FCFCFC;
 	padding: 10px;
+
 }	
 
 #feeling .feelerator	{
-	background: #FCFCFC
+	background: #FCFCFC;
+	padding: 0;
 	margin: 0px;
 	float: left;
 	width: 600px;
@@ -183,12 +187,14 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	margin: 0px;
 	float: left;
 	width: 200px;
+	padding: 0;
 }
 
 .fillin{
 	margin: 0px;
 	float: right;
 	width: 400px;
+	padding: 0;
 }
 
 #feeling .aside{
@@ -204,4 +210,5 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	width: 960px;
 	background: #F0F0F0;
 	text-align: center;
+	padding: 0;
 }
