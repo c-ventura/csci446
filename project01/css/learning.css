@@ -1,5 +1,5 @@
 body {
-	background:#aaaa;
+	background:#aaaaaa;
 	color: $000305;
 	font-size: 87.5%; /* Base font size: 14px */
 	font-family: 'Trebuchet MS', Arial, sans-serif;
@@ -85,3 +85,52 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     /* Tfoot */
     tfoot th {}
     tfoot td {}
+	
+/* letting me use tags instead of just div */
+header, section, footer, nav{
+	display: block;
+}
+
+/* settings for "body" class */
+.body {clear: both; margin: 0 auto; width: 800px;}
+img.right figure.right {float: right; margin: 0 0 2em 2em;}
+img.left, figure.left {float: right; margin: 0 0 2em 2em;}
+
+/* header prefs */
+
+#BigTitle{
+	margin: 0 auto;
+	padding: 2.5em 0 0 0;
+}
+
+	#BigTitle h1{font-size: 3.571em; line-height: .6;}
+	#BigTitle h1 a:link, #BigTitle h1 a:visited {
+		color: #123456;
+		display: block;
+		font-weight: bold;
+		margin: 0 0 .5em .25em; /* originally .6 and .2em*/
+		text-decoration:none;
+		width: 427px;
+	}
+	
+	#BigTitle h1 a:hover, #BigTitle h1 a:active {
+		background: none;
+		color: #C74350;
+		text-shadow: none;
+	}
+	
+	#BigTitle h1 strong{ font-size: 0.36em; font-weight: normal;}
+
+.MenuLinks{
+	background: #000000;
+	color:#333333;
+	font-family: courier,serif;
+	width: 800px;
+	float: left;
+
+}
+nav ul {list-style: none; margin: 0 auto; width: 800px;}
+nav li {float: left; display: inline; margin: 0;}
+	
+	
+
