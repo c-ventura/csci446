@@ -96,7 +96,7 @@ header, section, footer, nav{
 }
 
 /* settings for "body" class */
-.body {clear: both; margin: 0 auto; width: 960px;}
+.body {clear: both; margin: 0 auto; width: 940px;}
 /*
 img.right figure.right {float: right; margin: 0 0 2em 2em;}
 img.left, figure.left {float: right; margin: 0 0 2em 2em;}
@@ -104,13 +104,14 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 /* header prefs */
 
 #BigTitle{
+	padding: 10px;
 	margin: 0 auto;
 	/*padding: 2.5em 0 0 0;*/
 	background: #CCCCCC;
 	float:left;
 }
 
-	#BigTitle h1{font-size: 3.571em; line-height: .6;}
+	#BigTitle h1{font-size: 3.571em; }
 	#BigTitle h5{font-size: 1.5em; color:#666666;}
 	/*
 	#BigTitle h1 a:link, #BigTitle h1 a:visited {
@@ -132,17 +133,18 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	#BigTitle h1 strong{ font-size: 0.36em; font-weight: normal;}
 	*/
 .MenuLinks{
+	padding: 10px;
 	background: #000000;
 	color:#FFFFFF;
 	font-family: courier,serif;
-	width: 960px;
+	width: 940px;
 	float: left;
 
 }
 .MenuLinks nav{ 
 	background: #000000;
 	border-radius:5px 5px 5px 5px;
-	width: 960px;
+	width: 940px;
 	text-align: center;
 }
 
@@ -151,7 +153,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 .MenuLinks nav a:link,a:visited{
 	color: #F0F0F0;
 	display: inline-block;
-	height: 28px;
+	/*	height: 28px;*/
 	padding: 5px 1.5em;
 	text-decoration: none;
 }
@@ -159,19 +161,20 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 #feeling {
 	float: left;
 	background: #FCFCFC;
+	padding: 10px;
 }	
 
 #feeling .feelerator	{
 	background: #FCFCFC
 	margin: 0px;
 	float: left;
-	width: 610px;
+	width: 600px;
 }
 
 .questions{
 	margin: 0px;
 	float: left;
-	width: 210px;
+	width: 200px;
 }
 
 .fillin{
@@ -183,7 +186,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 #feeling .aside{
 	margin: 0;
 	float: right;
-	width: 350px;
+	width: 340px;
 	background: #F0F0FF;
 }
 
