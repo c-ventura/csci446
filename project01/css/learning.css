@@ -1,9 +1,9 @@
 /*Chris Ventura - CSCI446 */
 body {
 	background:#aaaaaa;
-	color: $000305;
+	/*color: $000305;
 	font-size: 87.5%; /* Base font size: 14px */
-	font-family: 'Trebuchet MS', Arial, sans-serif;
+	font-family: Calibri, sans-serif;
 	line-height: 1.429;
 	margin: 38px;
 	padding: 0;
@@ -19,8 +19,8 @@ h6 {font-size: 1em} /* 14px */
 
 h2, h3, h4, h5, h6 {
     font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: .8em;
+    /*line-height: 1.1;*/
+    margin-bottom: 0;
 }
 	
 /* Anchors? Not sure what they're for */
@@ -105,14 +105,14 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
 #BigTitle{
 	padding: 10px;
-	margin: 0 auto;
+	margin: 0;
 	/*padding: 2.5em 0 0 0;*/
 	background: #CCCCCC;
 	float:left;
 }
 
-	#BigTitle h1{font-size: 3.571em; }
-	#BigTitle h5{font-size: 1.5em; color:#666666;}
+	#BigTitle h1{font-size: 22; margin:0; font-weight: bold;}
+	#BigTitle h5{font-size: 12; color:#666666; margin: 0;}
 	/*
 	#BigTitle h1 a:link, #BigTitle h1 a:visited {
 		color: #123456;
@@ -133,11 +133,11 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	#BigTitle h1 strong{ font-size: 0.36em; font-weight: normal;}
 	*/
 .MenuLinks{
-	padding: 10px;
+	padding: 0;
 	background: #000000;
 	color:#FFFFFF;
 	font-family: courier,serif;
-	width: 940px;
+	width: 960px;
 	float: left;
 
 }
@@ -145,7 +145,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	background: #000000;
 	border-radius:5px 5px 5px 5px;
 	width: 940px;
-	text-align: center;
+	text-align: left;
 }
 
 .MenuLinks nav ul {list-style: none; margin: 0 auto; width: 960pxf;}
