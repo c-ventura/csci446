@@ -1,10 +1,12 @@
+/* I pulled out a bunch of things that I didn't think mattered for my needs,
+as well as added formatting for the third block. */
 body {
 	background:#aaaaaa;
 	color: $000305;
 	font-size: 87.5%; /* Base font size: 14px */
 	font-family: 'Trebuchet MS', Arial, sans-serif;
 	line-height: 1.429;
-	margin: 0;
+	margin: 38px;
 	padding: 0;
 	text-align: left;
 	}
@@ -23,7 +25,7 @@ h2, h3, h4, h5, h6 {
 }
 	
 /* Anchors? Not sure what they're for */
-
+/*
 a:link, a:visited{
 	color: #AF43AA;
 	padding: 0 1px;
@@ -36,8 +38,9 @@ a:hover, a:active{
 	text-decoration: none;
 	text-shadow: 1px 1px 1px #333;
 }
-
+*/
 /* Paragraphs */
+/*
 p {margin-bottom: 1.143em;}
 * p:last-child {margin-bottom: 0;}
  
@@ -46,8 +49,8 @@ em, i {font-style: italic;}
 	 
 ::-moz-selection {background: #F6CF74; color: #fff;}
 ::selection {background: #F6CF74; color: #fff;}
- 
-/* Lists */
+ */
+/* Lists *//*
 ul {
     list-style: outside disc;
     margin: 1em 0 1.5em 1.5em;
@@ -61,54 +64,60 @@ ol {
 dl {margin: 0 0 1.5em 0;}
 dt {font-weight: bold;}
 dd {margin-left: 1.5em;}
-	 
-/* Quotes */
+*/ 
+
+/* Quotes */ /*
 blockquote {font-style: italic;}
 cite {}
  
 q {}
- 
-/* Tables */
+ */
+
+/* Tables *//*
 table {margin: .5em auto 1.5em auto; width: 98%;}
  
-    /* Thead */
+    /* Thead *//*
     thead th {padding: .5em .4em; text-align: left;}
     thead td {}
  
-    /* Tbody */
+    /* Tbody *//*
     tbody td {padding: .5em .4em;}
     tbody th {}
  
     tbody .alt td {}
     tbody .alt th {}
  
-    /* Tfoot */
+    /* Tfoot *//*
     tfoot th {}
     tfoot td {}
-	
+	*/
 /* letting me use tags instead of just div */
 header, section, footer, nav{
 	display: block;
 }
 
 /* settings for "body" class */
-.body {clear: both; margin: 0 auto; width: 800px;}
+.body {clear: both; margin: 0 auto; width: 960px;}
+/*
 img.right figure.right {float: right; margin: 0 0 2em 2em;}
 img.left, figure.left {float: right; margin: 0 0 2em 2em;}
-
+*/
 /* header prefs */
 
 #BigTitle{
 	margin: 0 auto;
-	padding: 2.5em 0 0 0;
+	/*padding: 2.5em 0 0 0;*/
+	background: #CCCCCC;
 }
 
 	#BigTitle h1{font-size: 3.571em; line-height: .6;}
+	#BigTitle h5{font-size: 0.36em; color:#666666;}
+	/*
 	#BigTitle h1 a:link, #BigTitle h1 a:visited {
 		color: #123456;
 		display: block;
 		font-weight: bold;
-		margin: 0 0 .5em .25em; /* originally .6 and .2em*/
+		margin: 0 0 .5em .25em; /* originally .6 and .2em
 		text-decoration:none;
 		width: 427px;
 	}
@@ -119,18 +128,57 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 		text-shadow: none;
 	}
 	
+	
 	#BigTitle h1 strong{ font-size: 0.36em; font-weight: normal;}
-
+	*/
 .MenuLinks{
 	background: #000000;
-	color:#333333;
+	color:#FFFFFF;
 	font-family: courier,serif;
-	width: 800px;
+	width: 960px;
 	float: left;
 
 }
-nav ul {list-style: none; margin: 0 auto; width: 800px;}
-nav li {float: left; display: inline; margin: 0;}
+.MenuLinks nav{ 
+	background: #000000;
+	border-radius:5px 5px 5px 5px;
+	width: 960px;
+	text-align: center;
+}
+
+.MenuLinks nav ul {list-style: none; margin: 0 auto; width: 960pxf;}
+.MenuLinks nav li {float: left; display: inline; margin: 0;}
+.MenuLinks nav a:link,a:visited{
+	color: #F0F0F0;
+	display: inline-block;
+	height: 28px;
+	padding: 5px 1.5em;
+	text-decoration: none;
+}
 	
-	
+#feeling .feelerator	{
+	background: #FCFCFC
+	margin: 0px;
+	float: left;
+	width: 610px;
+}
+
+.questions{
+	margin: 0px;
+	float: left;
+	width: 210px;
+}
+
+.fillin{
+	margin: 0px;
+	float: right;
+	width: 400px;
+}
+
+#feeling .aside{
+	margin: 0;
+	float: right;
+	width: 350px;
+	background: #F0F0FF;
+}
 
