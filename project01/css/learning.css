@@ -1,16 +1,14 @@
 /*Chris Ventura - CSCI446 */
 body {
 	background:#aaaaaa;
-	/*color: $000305;
-	font-size: 87.5%; /* Base font size: 14px */
 	font-family: Calibri, sans-serif;
 	line-height: 1.429;
 	margin-left: 38px;
-	padding: 0;
+	/*padding: 0;*/
 	text-align: left;
-	border-width:1px;
-	
-	border-style: solid;
+	height:100%;
+	width: 960px;
+	border: 1px solid #000000;
 	}
 	
 /* Headings	*/
@@ -21,122 +19,42 @@ h5 {font-size: 1.143em} /* 16px */
 h6 {font-size: 1em} /* 14px */
 
 h1, h2, h3, h4, h5, h6 {
-    /*font-weight: 400;*/
-    /*line-height: 1.1;*/
     margin: 0 auto;
 }
 
 h5{ font-weight: 400;}
 	
-/* Anchors? Not sure what they're for */
-/*
-a:link, a:visited{
-	color: #AF43AA;
-	padding: 0 1px;
-	text-decoration: underline;
-}
-	
-a:hover, a:active{
-	background-color: #aaabbb;
-	color: #fff;
-	text-decoration: none;
-	text-shadow: 1px 1px 1px #333;
-}
-*/
-/* Paragraphs */
-
 p {margin: 5px;}
 
  
 strong, b {font-weight: bold;}
 em, i {font-style: italic;}
-/*	 
-::-moz-selection {background: #F6CF74; color: #fff;}
-::selection {background: #F6CF74; color: #fff;}
- */
+
 /* Lists */
 ul {
     list-style: outside disc;
     margin: 1em 0 1.5em 1.5em;
 }
-	/* 
-ol {
-    list-style: outside decimal;
-    margin: 1em 0 1.5em 1.5em;
-}
-
-dl {margin: 0 0 1.5em 0;}
-dt {font-weight: bold;}
-dd {margin-left: 1.5em;}
-*/ 
-
-/* Quotes */ /*
-blockquote {font-style: italic;}
-cite {}
- 
-q {}
- */
-
-/* Tables *//*
-table {margin: .5em auto 1.5em auto; width: 98%;}
- 
-    /* Thead *//*
-    thead th {padding: .5em .4em; text-align: left;}
-    thead td {}
- 
-    /* Tbody *//*
-    tbody td {padding: .5em .4em;}
-    tbody th {}
- 
-    tbody .alt td {}
-    tbody .alt th {}
- 
-    /* Tfoot *//*
-    tfoot th {}
-    tfoot td {}
-	*/
-/* letting me use tags instead of just div */
+	
+/* lets me use tags instead of just div */
 header, section, footer, nav{
 	display: block;
 }
 
 /* settings for "body" class */
 .body {clear: both; margin: 0 ; width: 940px; }
-/*
-img.right figure.right {float: right; margin: 0 0 2em 2em;}
-img.left, figure.left {float: right; margin: 0 0 2em 2em;}
-*/
-/* header prefs */
 
+/* header prefs */
 #BigTitle{
 	padding: 10px;
 	margin: 0;
-	/*padding: 2.5em 0 0 0;*/
 	background: #CCCCCC;
 	float:left;
 }
 
 	#BigTitle h1{font-size: 22; margin:0 auto;}
 	#BigTitle h5{font-size: 12; color:#666666; margin: 0;}
-	/*
-	#BigTitle h1 a:link, #BigTitle h1 a:visited {
-		color: #123456;
-		display: block;
-		font-weight: bold;
-		margin: 0 0 .5em .25em; /* originally .6 and .2em
-		text-decoration:none;
-		width: 427px;
-	}
 	
-	#BigTitle h1 a:hover, #BigTitle h1 a:active {
-		background: none;
-		color: #C74350;
-		text-shadow: none;
-	}
-	
-	
-	#BigTitle h1 strong{ font-size: 0.36em; font-weight: normal;}
-	*/
 .MenuLinks{
 	padding: 0;
 	background: #000000;
@@ -148,7 +66,6 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 }
 .MenuLinks nav{ 
 	background: #000000;
-	/*border-radius:5px 5px 5px 5px;*/
 	padding: 10px;
 	width: 940px;
 	text-align: left;
@@ -158,10 +75,8 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 .MenuLinks nav li {float: center; display: inline; margin-left: 20px; letter-spacing: -1px; font-weight: bold;}
 .MenuLinks nav li:first-child{margin-left: 0;}
 .MenuLinks nav a:link,a:visited{
-	color: #F0F0F0;
+	color: #FFFFFF;
 	display: inline;
-	/*	height: 28px;*/
-	/*padding: 5px 1.5em;*/
 	text-decoration: none;
 	margin: 0 auto;
 }
