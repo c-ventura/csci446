@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<!-- I changed some things to use div less, and have more things labeled. I also changed href tp css/learning.css from /css/learning.css so that the css sheet is actually applied -->
+<!--I made a few small changes so that block 3 had the correct input types. I think I need to change how I'm using the "body" class,
+as well as possibly change my div use for MenuLinks to be like header and footer, for simplicity--> 
 <html lang="en">
 	<head>
 		<title>Life Figure-Outer Application</title>
@@ -39,9 +40,14 @@
 					(choose all that apply)</p>
 				</div>
 				<div class = "fillin">
-					<p>input box here</p>
-					<p>option scroll box here</p>
-					<p>feel me button here</p>
+					<input type="text" name="writtenFeelings" />
+					<select size="4">
+					  <option value="Comfortably numb">Confortably numb</option>
+					  <option value="Grumpy as poop, you jerk">Grumpy as poop, you jerk</option>
+					  <option value="Happy like I'm on controlled substances">Happy like I'm on controlled substances</option>
+					  <option value="Normal. Absolutely Normal.">Normal. Absolutely Normal.</option>
+					</select><br>
+					<input type="button" value="Feel Me!" />
 				</div>
 			</div>
 			

@@ -108,10 +108,11 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	margin: 0 auto;
 	/*padding: 2.5em 0 0 0;*/
 	background: #CCCCCC;
+	float:left;
 }
 
 	#BigTitle h1{font-size: 3.571em; line-height: .6;}
-	#BigTitle h5{font-size: 0.36em; color:#666666;}
+	#BigTitle h5{font-size: 1.5em; color:#666666;}
 	/*
 	#BigTitle h1 a:link, #BigTitle h1 a:visited {
 		color: #123456;
@@ -156,6 +157,11 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	text-decoration: none;
 }
 	
+#feeling {
+	float: left;
+	background: #FCFCFC;
+}	
+
 #feeling .feelerator	{
 	background: #FCFCFC
 	margin: 0px;
