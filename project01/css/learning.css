@@ -8,6 +8,9 @@ body {
 	margin: 38px;
 	padding: 0;
 	text-align: left;
+	border-width:1px;
+	
+	border-style: solid;
 	}
 	
 /* Headings	*/
@@ -49,12 +52,12 @@ em, i {font-style: italic;}
 ::-moz-selection {background: #F6CF74; color: #fff;}
 ::selection {background: #F6CF74; color: #fff;}
  */
-/* Lists *//*
+/* Lists */
 ul {
     list-style: outside disc;
     margin: 1em 0 1.5em 1.5em;
 }
-	 
+	/* 
 ol {
     list-style: outside decimal;
     margin: 1em 0 1.5em 1.5em;
@@ -96,7 +99,7 @@ header, section, footer, nav{
 }
 
 /* settings for "body" class */
-.body {clear: both; margin: 0 auto; width: 940px;}
+.body {clear: both; margin: 0 ; width: 940px; }
 /*
 img.right figure.right {float: right; margin: 0 0 2em 2em;}
 img.left, figure.left {float: right; margin: 0 0 2em 2em;}
@@ -143,19 +146,24 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 }
 .MenuLinks nav{ 
 	background: #000000;
-	border-radius:5px 5px 5px 5px;
+	/*border-radius:5px 5px 5px 5px;*/
+	padding: 10px;
 	width: 940px;
 	text-align: left;
 }
 
-.MenuLinks nav ul {list-style: none; margin: 0 auto; width: 960pxf;}
-.MenuLinks nav li {float: left; display: inline; margin: 0;}
+.MenuLinks nav ul {margin: 0 0 0 0; width: 960px; padding: 0;}
+.MenuLinks nav li {float: center; display: inline; margin-left: 20px;}
+.MenuLinks nav li:first-child{margin-left: 0;}
 .MenuLinks nav a:link,a:visited{
 	color: #F0F0F0;
-	display: inline-block;
+	display: inline;
 	/*	height: 28px;*/
-	padding: 5px 1.5em;
+	/*padding: 5px 1.5em;*/
 	text-decoration: none;
+	margin: 0 auto;
+	
+	
 }
 	
 #feeling {
