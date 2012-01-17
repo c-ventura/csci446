@@ -5,7 +5,7 @@ body {
 	font-size: 87.5%; /* Base font size: 14px */
 	font-family: Calibri, sans-serif;
 	line-height: 1.429;
-	margin: 38px;
+	margin-left: 38px;
 	padding: 0;
 	text-align: left;
 	border-width:1px;
@@ -164,9 +164,8 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	/*padding: 5px 1.5em;*/
 	text-decoration: none;
 	margin: 0 auto;
-	
-	
 }
+.MenuLinks nav a:hover{ color: #F7B3DA;}
 	
 #feeling {
 	float: left;
@@ -196,6 +195,9 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	width: 400px;
 	padding: 0;
 }
+.fillin  ul {margin: 0 0 0 0; width: 400px; padding: 0;}
+.fillin  li {float: left; display: inline; padding: 5px; width: 390px;}
+
 
 #feeling .aside{
 	margin: 0;
@@ -203,6 +205,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	width: 340px;
 	background: #F0F0FF;
 }
+#feeling .aside h4,h5{ margin-left: 5px}
 
 #copyright {
 	margin: 0;
