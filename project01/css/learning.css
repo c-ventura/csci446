@@ -1,5 +1,4 @@
-/* I pulled out a bunch of things that I didn't think mattered for my needs,
-as well as added formatting for the third block. */
+/*Chris Ventura - CSCI446 */
 body {
 	background:#aaaaaa;
 	color: $000305;
@@ -188,3 +187,10 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 	background: #F0F0FF;
 }
 
+#copyright {
+	margin: 0;
+	float: left;
+	width: 960px;
+	background: #F0F0F0;
+	text-align: center;
+}
