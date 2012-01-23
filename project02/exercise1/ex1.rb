@@ -1,4 +1,5 @@
 puts "Hello World!"
+exit #exits the program early! So that only one line is printed.
 puts "Hello Again"
 puts "I like typing this."
 puts "This is fun."
