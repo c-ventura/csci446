@@ -1,11 +1,16 @@
 class Player
   def play_turn(warrior)
-    #Floor two. There's a bogey a few spaces away. I plan on feeling around, and if nothings there, to move forward. If there's a monster, I'll attack it!
-	if warrior.feel.empty? #if the next space is empty, move into it. else, attack whatever's there!
-		warrior.walk!
-	else
-		warrior.attack!
-	end #this end statement is needed for 'if' statements. There's no parenthesis needed for the initial if statement though, which is nice.
+    #Floor Three. There are 4 sludges, which do 3 damage every attack, so I will have to heal at some point to stop from dying.
+	
+	if warrior.feel.empty? #if the next space is empty and you have enough health to kill a sludge, move into it. Not enough health -> rest. Enemy there -> attack it.
+		if warrior.health > 6
+			warrior.walk!
+		else
+			warrior.rest!
+		end
+	else #Since I heal before going in, just attack if something's there.
+			warrior.attack!
+	end 
 
   end
 end
