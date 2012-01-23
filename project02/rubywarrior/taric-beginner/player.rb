@@ -1,9 +1,11 @@
 class Player
   def play_turn(warrior)
-    #I think all I can do is walk, for now. The staircase is 6 spaces away(without overlapping)
-	warrior.walk!
-	#testing to see if I keep walking, of if walking only moves one space.
-	#I can't really tell, since I don't know if play_turn is looping, or if I just keep walking.
-	#I'm sure I'll find out for sure on the second floor.
+    #Floor two. There's a bogey a few spaces away. I plan on feeling around, and if nothings there, to move forward. If there's a monster, I'll attack it!
+	if warrior.feel.empty? #if the next space is empty, move into it. else, attack whatever's there!
+		warrior.walk!
+	else
+		warrior.attack!
+	end #this end statement is needed for 'if' statements. There's no parenthesis needed for the initial if statement though, which is nice.
+
   end
 end
