@@ -1,37 +1,43 @@
 class Player
-
-	def initialize #To go all the way to the left, I'm going to use a boolean to mark when I've hit the wall.
-	@left_walled = false
-	end	
+	def initialize
+		@kill_count = 0
+	end
 	
 	def play_turn(warrior)
-    #Floor Six. I can now go backwards, to rescue that one captive against the wall.
-	#|C @ S aa|
+    #Floor Seven. I have to turn around on the wall so I can move forwards(and do more damage). Then, business as usual.
+	#|>a S @|
+	if(@kill_count >=2) #with this statement, I'll leave the level after killing everything instead of just healing back pointlessly.
+		warrior.walk!
+		return
+	end
+		@felt_space = warrior.feel
+		if @felt_space.wall?
+			warrior.pivot!
+		
 	
-		if @left_walled
-			if warrior.feel.empty? 
-				if warrior.health > 18 #need at least 18 health to run in and kill the archers back to back
-					warrior.walk!
-				else
-					(@health_prev > warrior.health ? (warrior.health > 7 ? warrior.walk! : warrior.walk!(:backward)) : warrior.rest!)
-					#I should turn this to normal syntax, it's getting ugly. It basically tells the warrior to run away if he has less than seven health. Otherwise, he'll charge in(or rest).
-				end
-			else #Something's in front of me
-				(warrior.feel.captive? ? warrior.rescue! : warrior.attack!)
-					#if it's a captive, rescue them. Otherwise, attack!
-			end 
-			@health_prev = warrior.health #set what your health was last turn.
-		  
+	
+		elsif @felt_space.empty? 
+			if @just_attacked
+				@just_attacked = false
+				@kill_count += 1
+			end
+			
+			if warrior.health > 11 #need at least 12 health to run in and kill the archer
+				warrior.walk!
+			else
+				(@health_prev > warrior.health ? (warrior.health > 7 ? warrior.walk! : warrior.walk!(:backward)) : warrior.rest!)
+				#I should turn this to normal syntax, it's getting ugly. It basically tells the warrior to run away if he has less than seven health. Otherwise, he'll charge in(or rest).
+			end
+		elsif @felt_space.captive? 
+			warrior.rescue!
+				#There aren't any captives, but I'd rather leave the code here for later levels
 		else
-			if warrior.feel(:backward).captive?
-				warrior.rescue!:backward
-				@left_walled = true
-			else #Something's behind of me
-			warrior.walk!:backward
-				#if it's a captive, rescue them. Then start going back right.
-			end 
-			@health_prev = warrior.health #set what your health was last turn.
-		end
+			warrior.attack!
+			@just_attacked = true
+		end 
+		@health_prev = warrior.health #set what your health was last turn.
+		  
+
 	end
 	
 
