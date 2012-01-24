@@ -1,2 +1,5 @@
 http://www.rubyinside.com/21-ruby-tricks-902.html
 It had some useful tips, though not super related
+
+http://www.howtogeek.com/howto/programming/ruby/ruby-if-else-if-command-syntax/
+shortened if-else syntax!
