@@ -1,2 +1,27 @@
 http://www.httpwatch.com/httpgallery/headers/
 -could get addon called httpwatch for this project
+
+-downloaded 'Live HTTP headers' and 'Tamper Data' Firefox addons
+
+gems: twitter, capistrano, paperclip
+(gem install someGem -v2.4.1) for a specific version.
+
+-cucumber testing methods?
+
+mongrel gem(not really used in production. 
+Modrails / Passenger is used instead. www.modrails.com)
+
+configure hosts and apache
+Zed Shaw - about Rails and state machines.
+
+-Selenium addon for integration testing
+-YAML is structural syntax, semi-alternative for XML
+
+-To get the API on my machine, use
+rails_apps> rails new dummy_app
+rails_apps> cd dummy_app
+dummy_app> rake doc:rails
+It's also online though.
+
+http://blog.emson.co.uk/2008/06/installing-sqlite3-on-windows-for-rails/
+for installing sqlite3. 
