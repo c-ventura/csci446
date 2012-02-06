@@ -25,3 +25,8 @@ It's also online though.
 
 http://blog.emson.co.uk/2008/06/installing-sqlite3-on-windows-for-rails/
 for installing sqlite3. 
+
+to iterate, use
+<% for file in @files %>
+file name is: <%= file %>
+<% end %>
