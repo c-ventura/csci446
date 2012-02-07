@@ -42,3 +42,5 @@ attr_writer :age # create writer only
 
 A “magic” command worth knowing, explained in detail in Part III, is rake db:migrate:redo.
 It will undo and reapply the last migration.
+
+page 80
