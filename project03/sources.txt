@@ -44,3 +44,6 @@ A “magic” command worth knowing, explained in detail in Part III, is rake db:mig
 It will undo and reapply the last migration.
 
 page 80
+pg 127 (146 of 476)
+
+11 - added partial templates to move the code for the cart out of show.html.erb.this let me move the cart to the sidebar for viewing.
