@@ -47,3 +47,37 @@ page 80
 pg 127 (146 of 476)
 
 11 - added partial templates to move the code for the cart out of show.html.erb.this let me move the cart to the sidebar for viewing.
+
+12 - when using bundle install, it said that my ruby file couldn't be found. I had to go into 'bundle' 
+in C:/RailsInstaller/Ruby1.9.2/bin/bundle and change the first line to #!c:/RailsInstaller/Ruby1.9.2/bin/ruby.exe
+described here http://stackoverflow.com/questions/6380373/rvm-finding-system-gems-executables
+
+$ rails runner script/load_orders.rb
+c:/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/railties-3.1.1/lib/rails/co
+mmands/runner.rb:49:in `eval': undefined local variable or method `script' for m
+ain:Object (NameError)
+        from c:/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/railties-3.1.1
+/lib/rails/commands/runner.rb:49:in `eval'
+        from c:/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/railties-3.1.1
+/lib/rails/commands/runner.rb:49:in `<top (required)>'
+        from c:/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/railties-3.1.1
+/lib/rails/commands.rb:63:in `require'
+        from c:/RailsInstaller/Ruby1.9.2/lib/ruby/gems/1.9.1/gems/railties-3.1.1
+/lib/rails/commands.rb:63:in `<top (required)>'
+        from script/rails:6:in `require'
+        from script/rails:6:in `<main>'
+		
+I need a script in the script folder called load_orders.rb. Unfortunately, I'm not sure how to implement that.
+However, the script just clicks buttons. I need to fix my problem with will_paginate and the app not finding the method for
+the addon
+
+http://www.ruby-forum.com/topic/157135
+
+undefined method `paginate' for #<Array:0x4866078>
+
+Rails.root: c:/Users/Chris/Documents/cs446/src/project03
+Application Trace | Framework Trace | Full Trace
+
+app/controllers/orders_controller.rb:5:in `index'
+
+fixed by changing Order.all to Order.paginate(:page => params[:page], :per_page => 30) in orders_controller.rb 
