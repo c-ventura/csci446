@@ -81,3 +81,12 @@ Application Trace | Framework Trace | Full Trace
 app/controllers/orders_controller.rb:5:in `index'
 
 fixed by changing Order.all to Order.paginate(:page => params[:page], :per_page => 30) in orders_controller.rb 
+
+(chap12) - Still have 2 errors caused by not having a 'title' method. I might have not added the title helper? 
+I tried remigrating my db, but with no luck. Using 'rails console' and then 'Orders.column_names', I checked
+for the property, but nothing. I know there are titles for Product, so I'm wondering if I have a mistype 
+somewhere in the test file.
+I noticed that the tests do not run in order, and my error is right after the delete test. I'd like to 
+think that it's deleting my test object, but all the other tests after should_get_edit run fine.
+
+I'm moving on to finish the project, and I'll come back for these errors later.
