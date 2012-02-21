@@ -20,6 +20,16 @@ class ArticlesController < ApplicationController
       format.json { render json: @article }
     end
   end
+  
+  def email
+    @article = Article.find(params[:id])
+
+    respond_to do |format|
+	  ArticleNotifier.received(@article).deliver
+      format.html # show.html.erb
+      format.json { render json: @article }
+    end
+  end
 
   # GET /articles/new
   # GET /articles/new.json
