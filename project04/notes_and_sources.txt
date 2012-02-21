@@ -1,0 +1,102 @@
+A few notes on the actual project
+
+-Make sure to have the correct subtitles at each page
+-After making an article, make sure there's always at least one article.
+-Colorful icons.
+
+http://www.lukew.com/ff/entry.asp?1502
+-tips on form making
+
+http://ruby.learncodethehardway.org/book/ex51.html
+-technical on making forms in ruby, and what happens (basic)
+
+http://programming-motherfucker.com/become.html
+huge list of free books
+
+-Just created the article class with scaffolding. I included
+creation_date and edit_count because I know I'll have to print them
+later. Now I need to remove them from the 'new' article form
+since I want those to default to 0 and the current time when
+the thing is submitted.
+
+http://www.tutorialspoint.com/ruby/ruby_date_time.htm
+-Added
+  after_initialize :default_values
+ 
+  private
+    def default_values
+       self.edit_count ||= 0
+       self.creation_date ||= Time.now.to_date()
+     end
+to article.rb to initialize defaults. it seems to work as soon as they
+hit the button to 'create a new article'.
+
+-Messing with the Articles form, noticed that I have attributes for 
+string and date. I forgot that I shouldn't have any spaces when creating something with scaffolding "edit_count: int" vs "edit_count:int". I unfortunately had the space, so now I need to do some damage control.
+     -I tried doing 'rails generate' again, but without the spaces. It           failed because I already had 'Articles'.
+     -I'm going to destroy the scaffolding using 'rails destroy article'.
+code used::
+          rails destroy scaffold Article
+          rails generate scaffold Article title:string author:string body:text creation_date:date edit_count:int
+          rake db:migrate
+
+http://www.orthogonalthought.com/blog/index.php/2007/06/mysql-and-ruby-on-rails-datatypes/
+There was an error during the migrate, with using :int. I'm going to try using :integer instead after destroying / recreating the scaffold.
+
+-Another error with rake db:migrate. It says that articles table already exists, which it should, so I can't recreate it. I'll need to just delete it and rake again.
+
+using rake db:reset to keep things easy. Except, it didn't actually work. 
+
+http://guides.rubyonrails.org/migrations.html
+I tried rolling back using  rake db:migrate:redo STEP=15 . But it didn't work.
+
+I went into db/migration and changed the file to just have the drop, ran it, then ran with just the create table methods.
+  def self.down
+    drop_table "articles"
+  end
+
+  def change
+    create_table :articles do |t|
+      t.string :title
+      t.string :author
+      t.text :body
+      t.date :creation_date
+      t.integer :edit_count
+
+      t.timestamps
+    end
+  end
+
+It worked!!!
+
+Now, I can create an article.
+I test after adding the initialization back for creation_date and edit_count, only to get the error
+
+1 error(s) on assignment of multiparameter attributes
+
+http://stackoverflow.com/questions/93277/what-does-activerecordmultiparameterassignmenterrors-mean 
+
+-Small things to check. None of them worked, unfortunately.
+
+http://stackoverflow.com/questions/1110411/transform-datetime-into-simple-date-in-ruby-on-rails
+http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html
+-Date formatting
+
+I removed 
+
+  <div class="field">
+    <%= f.label :creation_date %><br />
+    <%= f.date_select :creation_date %>
+  </div>
+  <div class="field">
+    <%= f.label :edit_count %><br />
+    <%= f.number_field :edit_count %>
+  </div>
+
+from the _form, because it was causing the problem.(i don't actually want user input for the date anyways). Now it works fine.
+
+
+
+
+
+
