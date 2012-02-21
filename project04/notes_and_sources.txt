@@ -95,6 +95,19 @@ I removed
 
 from the _form, because it was causing the problem.(i don't actually want user input for the date anyways). Now it works fine.
 
+-Commited
+
+-I've been working on formatting for the main articles page.
+I had trouble trying to get the backgrounds to alternate on the CSS page. Text alignment worked fine, so
+there must be something wrong with my syntax, or the background change is being overwritten.
+
+-On the EDIT page, I need to change the back arrow to go back instead of just going to the list.
+-On edit and create pages, I need to add the save / create buttons that link to the right places.
+	-edit button should increase edit_count when it's hit.
+	
+http://paulsturgess.co.uk/articles/42-how-to-automatically-pluralize-text-in-ruby-on-rails
+-how to pluralize.
+
 
 
 
