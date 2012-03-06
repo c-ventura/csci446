@@ -1,5 +1,5 @@
 class ArticleNotifier < ActionMailer::Base
-  default from: "Dwight Schrute dschrute@gmail.com"
+  default from: "Dwight Schrute <dschrute@gmail.com>"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:

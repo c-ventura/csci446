@@ -5,9 +5,9 @@
 		
 <div class = "view_buttons">
 		<td><%= link_to 'list all articles', articles_path %></td>
-		<td><%= link_to 'edit', edit_article_path(Article) %></td>
-		<td><%= link_to 'destroy', Article, confirm: 'Are you sure?', method: :delete %></td>
-		<td><%= link_to 'email', articles_path%></td>
+		<td><%= link_to 'edit', edit_article_path(@article) %></td>
+		<td><%= link_to 'destroy', @article, confirm: 'Are you sure?', method: :delete %></td>
+		<td><%= mail_to "guy@gmail.com", 'email', :subject => @article.title, :body => article_url(@article)  %></td>
 </div>
 
 <h4>
