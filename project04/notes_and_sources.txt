@@ -112,6 +112,15 @@ http://paulsturgess.co.uk/articles/42-how-to-automatically-pluralize-text-in-rub
 http://stackoverflow.com/questions/2115214/link-to-image-tag-how-to-add-class-to-a-tag
 -using image tags as links
 
+http://guides.rubyonrails.org/active_record_validations_callbacks.html#using-a-proc-with-if-and-unless
+for validation
+
+http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/
+routes
+http://stackoverflow.com/questions/6000222/devise-changing-default-routes-not-working
+https://github.com/plataformatec/devise/wiki/How-To:-Change-the-default-sign_in-and-sign_out-routes
+routes for logging in and out
+
 
 
 

@@ -1,6 +1,39 @@
 Articles::Application.routes.draw do
   resources :articles
+ 
+#    articles GET    /articles(.:format)          articles#index
+#             POST   /articles(.:format)          articles#create
+# new_article GET    /articles/new(.:format)      articles#new
+#edit_article GET    /articles/:id/edit(.:format) articles#edit
+#     article GET    /articles/:id(.:format)      articles#show
+#             PUT    /articles/:id(.:format)      articles#update
+#             DELETE /articles/:id(.:format)      articles#destroy
+#	root :to => "articles#index"
+#    get root => "articles#index"
+#	post root => "articles#create"
+#	get "/new" => "articles/new#new"
+#	match '/new', :to => 'articles/new#new'
+#   get "/:id/edit" => "articles/:id/edit#edit"        
+#	match '/:id/edit', :to => 'articles/:id/edit#edit'
+#	get "/:id" => "articles/:id#show"
+#	match '/:id', :to => 'articles/:id#show'
+#	post '/:id' => 'articles/:id#update'
+#	delete '/:id' => 'articles/:id#delete'
+	
+# new_article GET    /articles/new(.:format)      articles#new
+#edit_article GET    /articles/:id/edit(.:format) articles#edit
+#     article GET    /articles/:id(.:format)      articles#show
+#             PUT    /articles/:id(.:format)      articles#update
+#             DELETE /articles/:id(.:format)      articles#destroy
 
+  root :controller => 'articles', :action => 'index'
+  #redirect_to root_path
+  #match "articles/:id", :as => root
+  #match "articles/new", :as => root
+  #match "articles/:id/edit", :as => root
+  #map.connect ':controller/:action/:id'
+  #map.connect ':controller/:action/:id.:format'
+  #connect ':controller/:action/:id.:format'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
