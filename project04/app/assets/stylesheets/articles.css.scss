@@ -5,21 +5,22 @@
 
 h1 { text-align:center }
 h3 { text-align:center }
-.articles {
-  table {
+
+  table#articles {
     border-collapse: collapse;
   }
 
-  table tr td {
+  table#midTable {
     padding: 5px;
     vertical-align: top;
+	height: 50px;
+	overflow: auto;
   }
 
-  .list_line_even {
+  table#articles .list_line_even {
     background:   #E0F8F8;
   }
 
-  .list_line_odd {
+  table#articles_list .list_line_odd {
     background:   #f8b0f8;
   }
-}
