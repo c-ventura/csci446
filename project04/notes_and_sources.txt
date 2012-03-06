@@ -109,6 +109,9 @@ http://paulsturgess.co.uk/articles/42-how-to-automatically-pluralize-text-in-rub
 -how to pluralize.
 
 
+http://stackoverflow.com/questions/2115214/link-to-image-tag-how-to-add-class-to-a-tag
+-using image tags as links
+
 
 
 
