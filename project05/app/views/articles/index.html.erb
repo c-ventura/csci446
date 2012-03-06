@@ -1,0 +1,37 @@
+<h1>Articl.es</h1>
+<h3>... with a name .com hipsters love!</h3>
+
+<div class=midbar>
+<h2>All the World's Articles <%= link_to image_tag("add.png", :border => 0, :title => "Create"), new_article_path %>  Create an Article </h2>
+</div>
+<table>
+  <colHead>
+  <tr>
+    <th>Title</th>
+    <th>Author Name</th>
+    <th>Body</th>
+    <th>Creation Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </colHead>
+  <midTable>
+	<% @articles.each do |article| %>
+	  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+		<td><%=h article.title %></td>
+		<td><%=h article.author %></td>
+		<td><%= truncate(article.body, :length => 30) %></td>
+		<td><%= article.creation_date %></td>
+		<td><%= link_to image_tag("zoom.png", :border => 0, :title => "View Article"), article %></td>
+		<td><%= link_to image_tag("application_edit.png", :border => 0, :title => "Edit"), edit_article_path(article) %></td>
+		<td><%= link_to image_tag("delete.png", :border => 0, :title => "Delete"), article, confirm: 'Are you sure?', method: :delete %></td>
+	  </tr>
+	<% end %>
+	</midTable>
+</table>
+
+<br />
+<p><%= pluralize(@articles.size, "article")%>.</p>
+
+

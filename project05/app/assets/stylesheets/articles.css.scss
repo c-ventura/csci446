@@ -1,0 +1,26 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1 { text-align:center }
+h3 { text-align:center }
+
+  table#articles {
+    border-collapse: collapse;
+  }
+
+  table#midTable {
+    padding: 5px;
+    vertical-align: top;
+	height: 50px;
+	overflow: auto;
+  }
+
+  table#articles .list_line_even {
+    background:   #E0F8F8;
+  }
+
+  table#articles_list .list_line_odd {
+    background:   #f8b0f8;
+  }
