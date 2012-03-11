@@ -1,0 +1,122 @@
+Chris Ventura
+Web Applications Midterm
+3/10/12
+
+ARCHITECTURE
+1. The difference between a POST request and a PUT request is that a PUT request will only deal with the exact
+	URI specified, where as a POST request will let the specified URI apply its request to another resource.
+	
+2. The URL is relative.
+
+3. An absolute URL contains the full URL (containing the homepage url, like http://mines.humanoriented.com/exams/midterm.html)
+	while a relative URL just has a partial address (like exams/midterm.html). If it started with a '/', then
+	it would start looking from the root path.
+
+4. The browser would just do a GET request, since it's a href and not a form, and there's no js. 
+
+5. There's a query string, and it's "request_type=PUT", the part after the ?.
+
+6. If we left descriptions for links using titles it would make things more accessible to the user.
+
+7. The database is used for storage of data for web applications. The web browser is used to present 
+	the web application to the user.
+
+8. Because of the response "HTTP/1.1 200 OK", there would generally be body data  after the header, because
+	it was a errorless response, and the server is keeping a connection for data to be sent through. The 
+	Vary: for the Etag also indicated that it would probably be storable in cache. If there's something 
+	to store in the cache then body data should follow.
+
+RUBY
+9. 
+	class Troll
+		attr_accessor :ugliness, :smelliness, :strength
+		
+		def initialization(grunt = "UNGAH")
+		  @grunt = grunt
+		  @ugliness, @smelliness, @strength = nil
+		end
+		
+		def speak
+		  42.times do { puts @grunt }
+		end
+		
+		def reverse
+		  puts @grunt.reverse
+		end
+		
+		def self.propogate
+		   Troll.create(:grunt => "eegah")
+		end
+	end
+
+10. The respond_to? returns true if the string put in is a method in the class. For it to be true, I would
+	have to simply add a method named "fight" (preferably with some fighting logic).
+	
+11. The respond_to? method is mostly used for self inspection of a class. You could use it to test inherited
+	methods on a child class, but that does not necessarily illustrate polymorphism.
+	
+12. Any method that ends in a question mark conventionally returns a boolean value 
+	(like asking a yes/no question).
+	
+13. The difference is that the method ending in a bang (do_this!) will do something 'dangerous' such as 
+	alter object calling it, while (do_this) will not do anything that will alter the calling object. 
+	Methods with bangs are usually paired with a non-bang version. 
+	Zombie.do_this => returns something based on zombie's attributes
+	Zombie.do_this! => changes zombie's attributes and then returns that
+	
+14. Ruby uses a dynamic type system, which means that its type checking is done during runtime
+	as opposed to during compilation. So, values always have a type ("string" is a string), but
+	variables do not, and their type is defined by their value's type.
+	
+15. The yielded object is an array of strings, where the strings are delimited by whitespace(words). The
+	purpose of %w is to make an array of words out of a string, as opposed to some of the other %letters
+	that parse differently.
+	
+16. They do the same thing because they just use different ways to declare a code block (do end vs { }),
+	while the inside code is the same.
+	
+17. Explicit returns are not needed because if they are not included, the method returns the last 
+	value that was evaluated.
+
+RAILS	
+18. Four ActiveRecord callbacks that you can bind methods to:
+	before_save , after_save , before_create , after_create
+	
+19. 
+	HTTP method 	|	controller action 	|	CRUD operation
+	GET				|	index				|	read
+	GET				|	new					| 	read
+	POST			|	create				|	create
+	GET				|	edit				|	read
+	PUT				|	update				|	update
+	DELETE			|	delete				|	delete	
+	
+20. Rails simulates PUT and DELETE because HTML forms only supports GET/POST natively. Rails simulates 
+	them by making a hidden form method within the HTML form that models can later understand and handle
+	accordingly. The reason is to make a more RESTful application by also using PUT and DELETE.
+	
+21. The biggest difference is that Rails will look in different scopes of config for production vs 
+	development. Also, in developer mode you can have things enabled/disabled (caching, logging, etc)
+	that will not be in the production mode. Databases for development are also different than production.
+	
+22. You would name it to be singular if the controller only handled one object, as in there is only one 
+	Geocoding obj in your application. You could also name it singularly if you just dislike convention and
+	want to confuse everyone.
+	
+23. A rails helper method is a small bit of code/logic that you call in your view. Whenever you have 
+	repeated code in your view, you should put it into a helper method and call the helper instead. 
+	In general, any time you need logic in your view, its good to put it into a helper.
+	
+24. To have the proper schema, the flowers table would have a bee_id column, and the bees table would
+	have a flower_id column.
+	
+25. The number of queries is ok, but it would be better if they were reduced so that the database does
+	not have to deal with so many queries and slow down the app. You could reduce queeries by using eager
+	loading (pull in more in the initial database query) by changing @flower=Flower.find(parans[:id])
+	to
+	@flower = Flower.all(:include => :bees)
+	
+	
+	
+	
+	
