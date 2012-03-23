@@ -14,8 +14,8 @@ Articles::Application.routes.draw do
 #	post root => "articles#create"
 #	get "/new" => "articles/new#new"
 #	match '/new', :to => 'articles/new#new'
-#   get "/:id/edit" => "articles/:id/edit#edit"        
-#	match '/:id/edit', :to => 'articles/:id/edit#edit'
+   get "/:id/edit" => "/:id/edit#edit"        
+	match '/:id/edit', :to => '/:id/edit#edit'
 #	get "/:id" => "articles/:id#show"
 #	match '/:id', :to => 'articles/:id#show'
 #	post '/:id' => 'articles/:id#update'
@@ -32,8 +32,8 @@ Articles::Application.routes.draw do
   #match "articles/:id", :as => root
   #match "articles/new", :as => root
   #match "articles/:id/edit", :as => root
-  #map.connect ':controller/:action/:id'
-  #map.connect ':controller/:action/:id.:format'
+  #connect ':controller/:action/:id'
+  #connect ':controller/:action/:id.:format'
   #connect ':controller/:action/:id.:format'
   # The priority is based upon order of creation:
   # first created -> highest priority.
