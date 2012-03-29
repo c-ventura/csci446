@@ -9,5 +9,10 @@
    <b>Photo:</b>
    <%= image_tag @author.photo.url %>
 </p>
+
+<p>
+	<b>Written Works: </b>
+	<%= @author.articles.collect { |a| a.title } %>
+</p>
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
