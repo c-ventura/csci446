@@ -5,6 +5,8 @@ class Article < ActiveRecord::Base
   validates :title, uniqueness: true
   validate :no_pats
   
+  belongs_to :author
+  
   
  
   

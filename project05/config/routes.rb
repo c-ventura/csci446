@@ -1,4 +1,6 @@
 Articles::Application.routes.draw do
+  resources :authors
+
   resources :articles
  
 #    articles GET    /articles(.:format)          articles#index
