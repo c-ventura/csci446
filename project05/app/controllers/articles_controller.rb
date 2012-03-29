@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
+  
+  before_filter :authors_list, :only => [ :new, :edit, :update]
   def index
     @articles = Article.all
 
@@ -91,5 +93,9 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url }
       format.json { head :no_content }
     end
+  end
+  
+  def authors_list
+    @authors = Author.all
   end
 end
