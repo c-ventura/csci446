@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :author %>
-    <%= f.text_field :author %>
+    <%= f.select :author, Author.all %>
   </div>
   <div class="field">
     <%= f.label :body %>

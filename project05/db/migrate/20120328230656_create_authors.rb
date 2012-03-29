@@ -6,10 +6,10 @@ class CreateAuthors < ActiveRecord::Migration
 
       t.timestamps
     end
+	  #remove_column :articles, :author
+      #add_column :articles,:author_id, :integer
 	  
-      add_column :articles,:author_id, :integer
-	  
-	  Article.all.each do |a|
+	Article.all.each do |a|
 	  new_author = Author.create(:name => a.author)
 	  a.author = new_author
 	  a.save
