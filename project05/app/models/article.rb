@@ -7,9 +7,8 @@ class Article < ActiveRecord::Base
   
   belongs_to :author
   
-  
- 
-  
+  self.per_page = 10
+    
   def no_pats
 	has_pats = self.author =~ /pat/i
 	errors.add(:author, "is not valid. No pats allowed") unless (has_pats.nil?)

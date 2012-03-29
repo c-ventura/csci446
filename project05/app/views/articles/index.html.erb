@@ -30,6 +30,7 @@
 </table>
 
 <br />
-<p><%= pluralize(@articles.size, "article")%>.</p>
+<p><%= will_paginate @articles %></p>
+<p><%= pluralize(@total_articles, "article")%>.</p>
 
 

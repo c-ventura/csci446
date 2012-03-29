@@ -4,8 +4,9 @@ class ArticlesController < ApplicationController
   
   before_filter :authors_list, :only => [ :new, :edit, :update]
   def index
-    @articles = Article.all
-
+    #@articles = Article.all
+	@articles = Article.paginate(:page => params[:page])
+	@total_articles = Article.count
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
