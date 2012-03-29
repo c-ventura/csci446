@@ -1,0 +1,15 @@
+%p#notice= notice
+- content_for :subtitle do
+  %h3 ... what's "Articl" in Spanish anyway?
+.view_buttons
+  %td= link_to image_tag("arrow_back.png", :border => 0, :title => "All Articles"), articles_path
+  %td= link_to image_tag("application_edit.png", :border => 0, :title => "Edit"), edit_article_path(@article)
+  %td= link_to image_tag("delete.png", :border => 0, :title => "Delete"), @article, confirm: 'Are you sure?', method: :delete
+  %td= mail_to "guy@gmail.com", image_tag("email.png", :border => 0, :title => "Email") , :subject => @article.title, :body => article_url(@article)
+%h4
+  = @article.title
+%p
+  by
+  \#{@article.author}. #{pluralize(@article.edit_count, "edit")} since #{@article.creation_date}
+%p
+  = simple_format(@article.body)
