@@ -1,0 +1,19 @@
+sqlite3 -line db/development.sqlite3 "select * from accounts"
+^to see inside the databse easily.
+
+----------
+  def index
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+  end
+    
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_url, :notice => "Successfully destroyed user."
+  end
+  ^code chopped because I scaffolded with nifty generators without specifying new and create
+----------

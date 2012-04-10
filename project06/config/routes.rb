@@ -1,4 +1,12 @@
 Project06::Application.routes.draw do
+  
+  login "login", :controller => "user_sessions", :action => "new"
+  logout "logout", :controller => "user_sessions", :action => "destroy"
+  resources :user_sessions
+
+  resources :users
+  root :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
