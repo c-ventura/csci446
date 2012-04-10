@@ -14,7 +14,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      redirect_to new_user_path, :notice => "Successfully created user session."
+      redirect_to root_url, :notice => "Successfully created user session."
     else
       render :action => 'new'
     end
@@ -36,6 +36,6 @@ class UserSessionsController < ApplicationController
   def destroy
     @user_session = UserSession.find
     @user_session.destroy
-    redirect_to new_user_path, :notice => "Successfully logged out."
+    redirect_to root_url, :notice => "Successfully logged out."
   end
 end

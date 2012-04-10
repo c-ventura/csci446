@@ -1,6 +1,6 @@
 Project06::Application.routes.draw do
 
-  #root :users
+  root :to => 'users#index'
   resources :user_sessions
 
   resources :users
