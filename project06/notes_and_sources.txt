@@ -17,3 +17,6 @@ sqlite3 -line db/development.sqlite3 "select * from accounts"
   end
   ^code chopped because I scaffolded with nifty generators without specifying new and create
 ----------
+
+http://www.dixis.com/?p=352
+tutorial for getting authlogic set up, all in text.
