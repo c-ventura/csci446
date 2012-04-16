@@ -39,5 +39,6 @@ gem 'jquery-rails'
 
 gem "nifty-generators", :group => :development
 gem "authlogic"
+gem "declarative_authorization"
 
 gem "mocha", :group => :test

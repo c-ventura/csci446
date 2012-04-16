@@ -1,13 +1,18 @@
 Project06::Application.routes.draw do
 
-  root :to => 'users#index'
-  resources :user_sessions
+  root :to => 'user_sessions#new'
+  resources :user_sessions, :only => [:new, :create, :destroy]
 
-  resources :users
+  #resources :users
   match 'login' => "user_sessions#new", :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
   #login "login", :controller => "user_sessions", :action => "new"
   #logout "logout", :controller => "user_sessions", :action => "destroy"
+  namespace :admin do 
+	resources :roles
+	resources :users
+	root :controller => 'admin', :action => 'index'
+  end
 
   
 

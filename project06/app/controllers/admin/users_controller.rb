@@ -1,5 +1,5 @@
-class UsersController < ApplicationController
-
+class Admin::UsersController < Admin::AdminController #ApplicationController
+	
   def new
 	@user = User.new
   end
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
 	  flash[:notice] = "Registration successful."
-      redirect_to root_url, :notice => "Successfully created user."
+      redirect_to admin_user_url, :notice => "Successfully created user." #root_url
     else
       render :action => 'new'
     end
