@@ -1,0 +1,9 @@
+- title "User Session"
+%p
+  %strong Name:
+  = @user_session.name
+%p
+  = link_to "Edit", edit_user_session_path(@user_session)
+  |
+  \#{link_to "Destroy", @user_session, :confirm => 'Are you sure?', :method => :delete} |
+  \#{link_to "View All", user_sessions_path}

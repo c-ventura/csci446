@@ -40,5 +40,8 @@ gem 'jquery-rails'
 gem "nifty-generators", :group => :development
 gem "authlogic"
 gem "declarative_authorization"
+gem "haml"
+gem "erb2haml"
+
 
 gem "mocha", :group => :test
