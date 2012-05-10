@@ -32,7 +32,10 @@ function updateGuesses(){
 
 function guessNumber(){
    guess = document.getElementById("guess").value;
-  if(guess > correctNum){
+   if(guess > 100 || guess < 1){
+      msgMaybe("Out of bounds. An extra life taken as punishment!");
+	  updateGuesses();
+   }else if(guess > correctNum){
     msgMaybe("Too high!");
 	//updateHighScores(scores);
   }else if(guess < correctNum){
@@ -42,13 +45,32 @@ function guessNumber(){
     winparty();
   }
   updateGuesses();
+  
+  if(guessesLeft === 0){
+    sadparty();
+  }
 }
 
 function winparty(){
-$('h1#msgtext').html("You won!");
+  msgMaybe("Hooray! You lived/won!");
+  playAgain();
+  
+  var winner = prompt("Champion's Name?", "");
+  var winnerList = new Array([guessesLeft, winner]);
+  populateHighScores(winnerList);
+}
 
+function sadparty(){
+  msgMaybe("Sad day, you died/lost.");
+  playAgain();
 }
 
 function msgMaybe(massage){
 $('h1#msgtext').html(massage);
+}
+
+function playAgain(){
+$('h2#reload').html(" <a href=\"javascript:location.reload(true)\">Play Again?</a> ");
+
+
 }
