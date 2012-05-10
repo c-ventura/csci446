@@ -1,6 +1,6 @@
 var guessesLeft = 10;
 var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
-var correctNum = 55;
+var correctNum = Math.floor(Math.random()*100) + 1;
 var guess = 1;
 
 
