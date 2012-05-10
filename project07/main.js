@@ -1,9 +1,14 @@
 var guessesLeft = 10;
 var highScores = new Array([9, "HarryJamesPotter"], [3, "ZedCthulhu"], [2, "NearlyDied"]);
+var correctNum = 55;
 
 $(function() {
   updateScore(guessesLeft);
   populateHighScores(highScores);
+  updateGuesses(guessesLeft);
+  guessNumber(guess);
+  winparty();
+  
 });
 
 function populateHighScores(scores) {
@@ -13,5 +18,23 @@ function populateHighScores(scores) {
 }
 
 function updateScore(score) {
-  $('h2#score span#guessesLeft').append(score);
+  $('h2#score span#guessesLeft').html(score);
+}
+
+function updateGuesses(guessesLeft){
+  guessesLeft = guessesLeft-1;
+  $('h2#score span#guessesLeft').html(guessesLeft);
+}
+
+function guessNumber(guess){
+  if(guess === correctNum){
+    winparty();
+	//updateHighScores(scores);
+  }
+
+}
+
+function winparty(){
+$('h1#msgtext').append("You won!");
+
 }
