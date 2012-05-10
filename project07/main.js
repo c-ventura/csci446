@@ -32,17 +32,23 @@ function updateGuesses(){
 
 function guessNumber(){
    guess = document.getElementById("guess").value;
-  if(guess === correctNum){
-    winparty();
+  if(guess > correctNum){
+    msgMaybe("Too high!");
 	//updateHighScores(scores);
-  }else{
-  updateGuesses();
+  }else if(guess < correctNum){
+    msgMaybe("Too low!!!");
   
+  }else{
+    winparty();
   }
-
+  updateGuesses();
 }
 
 function winparty(){
 $('h1#msgtext').html("You won!");
 
+}
+
+function msgMaybe(massage){
+$('h1#msgtext').html(massage);
 }
